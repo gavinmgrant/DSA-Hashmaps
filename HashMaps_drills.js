@@ -53,4 +53,41 @@ const WhatDoesThisDo = function(){
     console.log(map2.get(str3));
 };
 
-console.log(WhatDoesThisDo());
+// console.log(WhatDoesThisDo());
+
+// 3. Demonstrate understanding of Hash maps
+
+/*
+1) Show your hash map after the insertion of keys 10, 22, 31, 4, 15, 28, 17, 88, 59 
+into a hash map of length 11 using open addressing and a hash function k mod m, 
+where k is the key and m is the length.
+
+    keys                slots   bucket
+    10 mod 11 = 1       0       22
+    22 mod 11 = 0       1       10
+    31 mod 11 = 9       2       88
+    4 mod 11 = 3        3       4
+    15 mod 11 = 4       4       15
+    28 mod 11 = 6       5       59
+    17 mod 11 = 6       6       28
+    88 mod 11 = 0       7       17
+    59 mod 11 = 4       8       null
+                        9       31
+                        10      null  
+                        
+2) Show your hash map after the insertion of the keys 5, 28, 19, 15, 20, 33, 12, 17, 10 
+into the hash map with collisions resolved by separate chaining. 
+Let the hash table have a length m = 9, and let the hash function be k mod m.  
+
+    keys                slots   bucket
+    5 mod 9 = 4         0       null
+    28 mod 9 = 1        1       28 -> 19 -> 10
+    19 mod 9 = 1        2       20
+    15 mod 9 = 6        3       12
+    20 mod 9 = 2        4       5
+    33 mod 9 = 6        5       null
+    12 mod 9 = 3        6       15 -> 33
+    17 mod 9 = 8        7       null
+    10 mod 9 = 1        8       17
+*/
+ 
