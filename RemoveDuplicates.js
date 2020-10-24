@@ -20,7 +20,7 @@ const removeDuplicates = string => {
     newMap._hashTable.forEach(letter => {
         newString += letter.key;
     });
-
+    console.log('hashTable: ', newMap._hashTable);
     return newString;
 };
 
